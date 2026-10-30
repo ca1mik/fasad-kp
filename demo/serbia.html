@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#132c37">
+  <meta name="description" content="Fasad Flow — interaktivni prikaz toka porudžbine za radionice nameštaja i frontova u Srbiji.">
+  <title>Fasad Flow · Porudžbine i proizvodnja</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="serbia.css">
+  <script src="serbia.js" defer></script>
+</head>
+<body>
+  <div class="demo-band"><span><i></i> INTERAKTIVNI PRIKAZ · DEMO PODACI</span><button id="resetDemo" type="button">Vrati početne podatke</button></div>
+  <header class="site-header">
+    <a class="brand" href="serbia.html" aria-label="Fasad Flow početna"><span class="brand-mark">F</span><span>FASAD <em>FLOW</em></span></a>
+    <nav aria-label="Navigacija"><a href="#problem">Problem</a><a href="#demo">Demo</a><a href="#pilot">Pilot</a></nav>
+    <a class="header-cta" href="#demo">Isprobajte prikaz <span>↗</span></a>
+  </header>
+  <main>
+    <section class="hero wrap" id="problem">
+      <div class="hero-copy"><p class="eyebrow"><span></span> ZA RADIONICE NAMEŠTAJA I FRONTOVA</p><h1>Od upita do gotovog naloga. <span>Bez nagađanja gde je posao stao.</span></h1><p class="hero-lead">Fasad Flow povezuje specifikaciju, rok, materijal i fazu izrade u jedan pregled. Menadžer vidi šta se dešava u radionici; radionica zna šta je kupcu obećano.</p><div class="hero-actions"><a class="button primary" href="#demo">Otvorite interaktivni demo <span>↗</span></a><a class="text-link" href="#pilot">Kako izgleda pilot <span>→</span></a></div><p class="hero-note">Prikaz ispod radi lokalno u vašem pregledaču i koristi izmišljene porudžbine.</p></div>
+      <div class="hero-card" aria-label="Tok jednog naloga"><div class="card-top"><span>RADNI NALOG <b>FF-1042</b></span><span class="pulse">U IZRADI</span></div><h2>Frontovi za kuhinju · MDF</h2><p>24 pozicije · lakirani frontovi · rok u nalogu</p><div class="hero-track"><span class="done">Upit</span><span class="done">Ponuda</span><span class="active">Proizvodnja</span><span>Isporuka</span></div><div class="hero-card-foot"><span>Trenutna faza <b>Farbanje</b></span><span>Odgovoran <b>Radionica</b></span></div></div>
+    </section>
+    <section class="value-strip"><div class="wrap value-grid"><div><b>01</b><span>Rok je vidljiv svakome ko radi na nalogu.</span></div><div><b>02</b><span>Pozicije i materijal putuju zajedno sa porudžbinom.</span></div><div><b>03</b><span>Zastoj je vidljiv dok je nalog u radu.</span></div></div></section>
+    <section class="product wrap" id="demo"><div class="section-head"><div><p class="eyebrow"><span></span> PROBAJTE TOK</p><h2>Jedan pregled za ceo posao.</h2><p>Izaberite nalog, promenite fazu i vidite kako se menja operativni pregled.</p></div><span class="demo-label">SAMO DEMONSTRACIJA</span></div>
+      <div class="workspace">
+        <aside class="workspace-nav"><div class="workspace-brand"><span class="brand-mark">F</span><div><strong>FASAD FLOW</strong><small>Radionica · Srbija</small></div></div><div class="nav-label">PREGLED</div><a class="active" href="#demo">▦ <span>Operativni pregled</span></a><a href="#orders">▤ <span>Porudžbine</span></a><a href="#detail">⌁ <span>Faze izrade</span></a><a href="#pilot">◇ <span>Pilot</span></a><div class="nav-bottom">SIMULACIJA<br><small>Podaci ostaju u ovom pregledaču.</small></div></aside>
+        <div class="workspace-main"><div class="workspace-bar"><div><small>RADNI PROSTOR / PREGLED</small><h3>Dobro jutro, radionico.</h3></div><span class="today" id="today"></span></div>
+          <div class="metrics"><div><small>Aktivni nalozi</small><strong id="activeCount">0</strong><span>u toku proizvodnje</span></div><div><small>Rok do 7 dana</small><strong id="dueCount">0</strong><span>obratite pažnju</span></div><div><small>Čeka materijal</small><strong id="materialCount">0</strong><span>blokirani nalozi</span></div><div><small>Vrednost u radu</small><strong id="activeValue">0 RSD</strong><span>demo iznos</span></div></div>
+          <div class="work-grid"><section class="orders-panel" id="orders"><div class="panel-head"><div><b>Porudžbine</b><small>Izaberite red da otvorite nalog</small></div><button type="button" id="newOrder">+ Novi nalog</button></div><div class="table-scroll"><table><thead><tr><th>Nalog</th><th>Kupac</th><th>Rok</th><th>Status</th></tr></thead><tbody id="orderRows"></tbody></table></div></section>
+          <section class="detail-panel" id="detail" aria-live="polite"><div class="panel-head"><div><b>Detalji naloga</b><small id="selectedId">—</small></div><span class="detail-icon">↗</span></div><div id="orderDetail"></div></section></div>
+        </div>
+      </div>
+      <p class="demo-caption">Ovo je pregled koncepta. Podaci, statusi i promene su simulirani u pregledaču; nisu povezani sa stvarnim proizvodnim sistemom.</p>
+    </section>
+    <section class="pilot" id="pilot"><div class="wrap pilot-grid"><div><p class="eyebrow"><span></span> SLEDEĆI KORAK</p><h2>Pilot na vašem procesu, ne na lepim primerima.</h2><p>Za 30 dana proveravamo jedan stvaran tok porudžbine: od specifikacije i roka do proizvodnje i predaje. Zajedno definišemo faze, odgovorne osobe i meru uspeha.</p></div><div class="pilot-steps"><div><b>1</b><span><strong>Razgovor, 20 minuta</strong><small>Kako nalog danas prolazi kroz firmu?</small></span></div><div><b>2</b><span><strong>Jedan uzorak naloga</strong><small>Proveravamo pozicije, materijal i odgovorne.</small></span></div><div><b>3</b><span><strong>Dogovor o pilotu</strong><small>Opseg i uslovi tek nakon provere potreba.</small></span></div></div></div></section>
+  </main>
+  <footer><div class="wrap"><strong>FASAD FLOW</strong><span>Demonstracioni prikaz · Bez stvarnih podataka o kupcima</span></div></footer>
+  <dialog id="newOrderDialog"><form id="newOrderForm"><div class="dialog-head"><h2>Novi demo nalog</h2><button type="button" id="closeDialog" aria-label="Zatvori">×</button></div><label>Kupac<input name="customer" maxlength="60" required placeholder="Naziv kupca"></label><label>Proizvod<input name="product" maxlength="80" required placeholder="Kuhinjski frontovi"></label><div class="dialog-grid"><label>Rok<input name="due" type="date" required></label><label>Iznos (RSD)<input name="amount" type="number" min="0" max="100000000" step="1" required></label></div><button class="button primary" type="submit">Dodaj nalog</button></form></dialog>
+</body>
+</html>

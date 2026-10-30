@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172033">
+  <title>Fasad Flow — CRM мебельного производства</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="demo-ribbon"><span>Интерактивная демо-версия</span><div><button id="exportDemo">Экспорт данных</button><button id="resetDemo">Сбросить данные</button></div></div>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-sign"><i></i><i></i><i></i></div>
+        <div><strong>FASAD FLOW</strong><small>заявки · заказы · производство</small></div>
+      </div>
+      <div class="factory-label"><span>ФП</span><div><strong id="factoryName">Фасад Профи</strong><small>Локальное демо</small></div><b>⌄</b></div>
+      <nav class="nav" id="nav">
+        <p>Работа с клиентом</p>
+        <button data-route="workspace"><span>＋</span>Новая заявка</button>
+        <button data-route="leads"><span>✦</span>Все заявки <em id="leadsBadge">4</em></button>
+        <button data-route="clients"><span>◎</span>Клиенты</button>
+        <button data-route="orders"><span>▤</span>Заказы <em id="ordersBadge">8</em></button>
+        <button data-route="quotes"><span>▧</span>КП</button>
+        <p>Цех</p>
+        <button data-route="cutting"><span>✂</span>Раскрой листа</button>
+        <button data-route="cutting-batch"><span>▧</span>Раскрой партией</button>
+        <button data-route="production"><span>⌁</span>Производство <em class="warn">3</em></button>
+        <p>Справочники и контроль</p>
+        <button data-route="dashboard"><span>▦</span>Сводка</button>
+        <button data-route="price-book"><span>₽</span>Справочник цен</button>
+        <button data-route="workers"><span>♙</span>Работники</button>
+        <p>Учёт и аналитика</p>
+        <button data-route="materials"><span>◇</span>Материалы</button>
+        <button data-route="stock"><span>▣</span>Склад</button>
+        <button data-route="reports"><span>⌗</span>Отчёты</button>
+        <button data-route="settings"><span>⚙</span>Настройки производства</button>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="load-widget"><div><span>Загрузка цеха</span><strong>—</strong></div><div class="meter"><i style="width:0%"></i></div><small>Появится после начала работы</small></div>
+        <div class="user"><span class="avatar dark">АК</span><div><strong>Алексей Ковалёв</strong><small>Администратор</small></div><button>•••</button></div>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu">☰</button>
+        <div class="crumbs" id="crumbs">Рабочее место</div>
+        <label class="global-search"><span>⌕</span><input id="globalSearch" placeholder="Найти заказ, клиента, телефон…"><kbd>Ctrl K</kbd></label>
+        <button class="top-icon" id="helpButton" title="Подсказки">?</button>
+        <button class="top-icon notification" id="notificationButton" title="Уведомления">♢<i></i></button>
+        <button class="button compact" id="exampleOrders" type="button">Примеры заказов</button>
+        <button class="button compact" id="themeToggle" type="button" aria-pressed="false">Тёмная тема</button>
+        <button class="button primary compact" id="quickCreate">＋ Новый заказ</button>
+      </header>
+      <main id="app" tabindex="-1"></main>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-layer" id="modalLayer" aria-hidden="true"></div>
+  <script src="production_flow.js"></script>
+  <script src="kp_core.js"></script>
+  <script src="portable_rules.js"></script>
+  <script src="factory_settings.js"></script>
+  <script src="fasad_cad.js"></script>
+  <script src="fasad_cam.js"></script>
+  <script src="cutting_layout.js"></script>
+  <script src="grouped_parts.js"></script>
+  <script src="vendor/xlsx.full.min.js"></script>
+  <script src="excel_order_import.js"></script>
+  <script src="cad_ui.js"></script>
+  <script src="app.js"></script>
+  <script src="kp_ui.js"></script>
+  <script src="quotes.js"></script>
+  <script src="demo_extras.js"></script>
+  <script src="portable_workflow.js"></script>
+  <script src="product_logic.js"></script>
+  <script src="cutting_exports.js"></script>
+  <script src="lead_drafts.js"></script>
+</body>
+</html>

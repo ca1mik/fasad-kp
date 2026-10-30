@@ -1,0 +1,45 @@
+# Secrets and local overrides
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Runtime state and logs
+data/
+logs/
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local credentials and generated files
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.db
+*.sqlite*
+*.log
